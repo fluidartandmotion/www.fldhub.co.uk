@@ -1,0 +1,864 @@
+html, body {
+    height:100%;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Dosis', sans-serif;
+}
+a {
+	color: #2e2e2e;
+	transition: 0.4s ease all;
+	outline: none;
+}
+a:hover,a:active,a:focus{
+	text-decoration: none;
+	color: #18add0;
+	opacity: 0.9;
+	outline: none;
+}
+.btn {
+    color: #fff;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 0px;
+    font-size: 1.2em;
+    transition: 0.4s ease all;
+}
+.btn:hover {
+    background: #fff;
+    color: #000;
+}
+.page_title {
+    font-size: 4em;
+    font-weight: 300;
+    overflow: hidden;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    display:block;
+}
+.sidebar_title {
+    font-size: 1.2em;
+    font-weight: 300;
+    overflow: hidden;
+    padding-bottom: 10px;
+    display:block;
+}
+.block_title {
+    font-size: 4em;
+    font-weight: 300;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 50px;
+    padding-bottom: 10px;
+}
+.block_title:before,.block_title:after {
+    content: "";
+    background: #ccc;
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    width: 42%;
+    vertical-align: middle;
+}
+.block_title:before {
+    right: 0.5em;
+    margin-left: -42%;
+}
+.block_title:after {
+    left: 0.5em;
+    margin-right: -42%;
+}
+
+/* ///////////////////////////////////////////////////////////////////// 
+//  02 - Header 
+/////////////////////////////////////////////////////////////////////*/
+
+header{
+	background: url(../images/bg.jpg) no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: 50% -50px;
+}
+.center {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.7);
+}
+.bigheadline {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 100;
+	font-size: 8em;
+	margin: 0;
+}
+.subheadline {
+	font-family: 'Titillium Web', sans-serif;
+	font-weight: 200;
+	font-size: 3em;
+	margin: 0;
+}
+
+.scrollDown {
+    font-size: 4em;
+    color: #18add0;
+    position: absolute;
+    bottom: 10%;
+    left: 49%;
+}
+.scrollDown:hover{
+	color: rgba(0, 0, 0, 0.7);
+	transition: 0.4s ease all;
+}
+#index-video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -100;
+    right: 0;
+    bottom: 0;
+    /*background: url(../images/bg.jpg) no-repeat 50% -50px;*/
+    background-size: cover;
+    overflow: hidden;
+}
+
+.index-video-wrapper {
+    height: 100%;
+    width: 100%;
+    /*background: url(../images/bg.jpg) no-repeat 50% -50px;*/
+    background-size: cover;
+}
+*::-webkit-media-controls-start-playback-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
+
+
+/* ///////////////////////////////////////////////////////////////////// 
+//  03 - Navigation 
+/////////////////////////////////////////////////////////////////////*/
+
+#navigation, #staticNav{
+	background: #000;
+}
+#staticNav{
+	position:fixed;
+  top:0;
+  display:block;
+  width:100%;
+  z-index:9999;
+  opacity:1.0;
+}
+.nav-wrap {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+}
+
+.logo {
+	height: 76px;
+	display: table;
+	text-align: left;
+}
+
+.logo-text {
+    font-size: 200%;
+    padding: 0.2em 0;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    display: table-cell;
+	vertical-align: middle;
+}
+
+.menu {
+    float: right;
+    font-size: 3em;
+    color: #fff;
+    padding-top: 10px;
+}
+.dropdown-menu {
+    min-width: 240px;
+    right: 0;
+    left: auto;
+    border: 1px solid #000;
+    box-shadow: none;
+    border-radius: 0px;
+    margin-top: 5px;
+}
+.dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 1em 2em;
+    margin-top: 5%;
+}
+.dropdown-menu ul li {
+    padding: 0.3em 0em 0.6em 0em;
+    font-size: 1.3em;
+    position: relative;
+}
+.dropdown-menu ul li a i {
+    position: absolute;
+    right: 0;
+    top: 20%;
+    font-size: 25px;
+}
+.arrow-up {
+	width: 0; 
+	height: 0; 
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	
+	border-bottom: 8px solid white;
+	float: right;
+	margin-top: -5%;
+	margin-right: 23px;
+}
+
+.modal-dialog {
+    margin: 150px auto;
+    width: 300px;
+    color:#ffffff;
+}
+.modal-content {
+    background-clip: padding-box;
+    background-color: #000000;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 6px;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    outline: 0 none;
+    position: relative;
+}
+.close {
+    color: #fff;
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    opacity: 0.8;
+    text-shadow: 0 1px 0 #fff;
+    z-index:9999;
+    margin-top:-10px;
+}
+.modal-content a {
+    display:block;
+    width:100%!important;
+    text-align:center;
+    color:#2c95e4;about
+}
+
+/* ///////////////////////////////////////////////////////////////////// 
+//  04 - Coaching
+/////////////////////////////////////////////////////////////////////*/
+
+
+
+.coaching {
+    max-width: 293px;
+    height: 263px;
+}
+.exp{
+	padding-top: 76px;
+}
+.coaching-area {
+    margin: 80px 0px 40px 0px;
+    padding-bottom:50px;
+    background-color:#ffffff;
+}
+
+.coaching-wrap {
+position:relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #B5B5B5;
+    text-align: center;
+    display: block;
+    /*border-radius: 50%;*/
+}
+.coaching-wrap .coaching-text {
+position:absolute;
+    bottom: 0px;
+    color: #ffffff;
+    background-color:#000000;
+    opacity:0.8;
+    Width:100%;
+}
+.coaching-text:hover {
+    color: #18add0;
+    opacity:1.0;
+}
+.coaching-wrap p {
+    padding: 0px 40px;
+    font-size: 13px;
+    opacity:1.0;
+}
+.coaching-wrap h3 {
+    margin: 10px 0px;
+    padding-left:5px;
+    padding-right:5px;
+    font-size: 1.3em;
+}
+.pe-dj {
+    font-size: 9em;
+}
+
+
+/* ///////////////////////////////////////////////////////////////////// 
+//  05 - Blog
+/////////////////////////////////////////////////////////////////////*/
+
+
+#blog {
+    padding: 80px 0px 0px 0px;
+}
+
+.port {
+	list-style: none;
+	text-align: left;
+	padding-bottom: 40px;
+}
+
+.port .item {
+	display: inline-block;
+	text-align: left;
+	position: relative;
+}
+
+.port figure {
+	margin: 0;
+	position: relative;
+}
+
+.port figure img {
+	max-width: 100%;
+	display: block;
+	position: relative;
+}
+
+.port figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 20px;
+	background: #111;
+	color: #18add0;
+}
+
+.port figcaption h3 {
+	margin: 0px 0px 4px 0px;
+	padding: 0 100px 0 0;
+	color: #fff;
+  font-size:1.4em;
+}
+
+/*.port figcaption span:before {
+	content: 'by ';
+}
+*/
+.port figcaption a {
+	text-align: center;
+	padding: 8px 15px;
+	display: inline-block;
+	color: #fff;
+}
+
+.cs-style-3 figure {
+	overflow: hidden;
+}
+
+.cs-style-3 figure img {
+	-webkit-transition: -webkit-transform 0.4s;
+	-moz-transition: -moz-transform 0.4s;
+	transition: transform 0.4s;
+}
+
+.no-touch .cs-style-3 figure:hover img,
+.cs-style-3 figure.cs-hover img {
+	-webkit-transform: translateY(-50px);
+	-moz-transform: translateY(-50px);
+	-ms-transform: translateY(-50px);
+	transform: translateY(-50px);
+}
+
+.cs-style-3 figcaption {
+	height: 100px;
+	width: 100%;
+	top: auto;
+	bottom: 100px;
+	opacity: 1.0;
+	-webkit-transform: translateY(100%);
+	-moz-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	transform: translateY(100%);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+	transition: transform 0.4s, opacity 0.1s 0.3s;
+}
+
+.no-touch .cs-style-3 figure:hover figcaption,
+.cs-style-3 figure.cs-hover figcaption {
+	opacity: 1;
+	-webkit-transform: translateY(100px);
+	-moz-transform: translateY(100px);
+	-ms-transform: translateY(100px);
+	transform: translateY(100px);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s;
+	transition: transform 0.4s, opacity 0.1s;
+}
+
+.cs-style-3 figcaption a {
+	position: absolute;
+	bottom: 31px;
+	right: 20px;
+}
+.button{
+	background: transparent;
+	border: 1px solid #fff;
+}
+.button:hover {
+    background: white;
+    color: #000;
+}
+.btn-center {
+    display: block;
+    padding: 80px 0px 60px 0px;
+    text-align: center;
+}
+.big.button {
+    border: 1px solid #000;
+    font-size: 2em;
+    color: #000;
+    padding: 15px 30px;
+}
+.big.button:hover {
+    background: #000;
+    color: #fff;
+}
+.item-space {
+    margin-bottom: 30px;
+}
+
+.blog-spot img {
+width:400px;
+height:311px;
+}
+
+
+/* ///////////////////////////////////////////////////////////////////// 
+//  06 - About 
+/////////////////////////////////////////////////////////////////////*/
+
+#about {
+    background: url(../images/parallax.jpg);
+    padding: 80px 0px 80px 0px;
+    color: #fff;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.about-block {
+    text-align: center;
+}
+.about-block img {
+    border-radius: 0%;
+    border: 1px solid #000;
+    max-width: 300px;
+    max-height: 300px;
+    margin-bottom: 30px;
+}
+.about-block p {
+    max-width: 60%;
+    margin:20px auto 0 auto;
+    margin-bottom: 20px;
+    font-style: italic;
+    font-size: 18px;
+}
+.about-block strong {
+    font-size: 2em;
+}
+
+
+/* ///////////////////////////////////////////////////////////////////// 
+//  07 - Contact
+/////////////////////////////////////////////////////////////////////*/
+
+
+#contact {
+    color: #fff;
+}
+
+.mapWrap {
+    position: relative;
+    min-height: 600px;
+}
+#googleMap {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+#contact-area {
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    position: relative;
+    padding: 80px 0px 60px 0px;
+}
+
+.moreDetails {
+    color: #fff;
+}
+.con-title {
+    font-weight: 300;
+    font-size: 3em;
+    margin: 0;
+    padding-bottom: 30px;
+}
+.moreDetails p {
+    font-size: 16px;
+}
+.address {
+    list-style: none;
+    margin: 0;
+    padding: 10px 0px 0px 0px;
+}
+.address li {
+    font-size: 1.1em;
+    position: relative;
+    margin-bottom: 3%;
+}
+.address li i {
+    font-size: 20px;
+    position: absolute;
+    top: 1px;
+}
+.address li span {
+    padding-bottom: 10px;
+    position: relative;
+    left: 30px;
+}
+.form-control {
+    box-shadow: none;
+    border: 1px solid #8E8E8E;
+    border-radius: 0px;
+    padding: 12px 12px;
+    height: auto;
+    background: rgba(255, 255, 255, 0.11);
+}
+.form-group input,.form-group textarea {
+    color: #FFF;
+}
+
+/*Social media links*/
+
+#social {
+    background-color: rgba(0, 0, 0, 0.75) !important;
+    padding: 30px 0px 30px 0px;
+    position: relative;
+}
+.normal-txt {
+    color: #fff;
+    font-size: 3em;
+    font-weight: 100;
+    padding-bottom: 10px;
+    border-bottom: 1px solid;
+    max-width: 300px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.scoialinks {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+.social-icons {
+    display: inline-block;
+    padding: 0px 5px;
+}
+.social-icons a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-size: 100% 200%;
+}
+.social-icons a.modalLink {
+    display: block;
+    width: 250px;
+    height: 250px;
+}
+
+.social-icons a:hover {
+    background-position: 0px -50px;
+    cursor:pointer;
+}
+.facebook{
+	background-image: url(../images/facebook.png);
+}
+.twitter{
+	background-image: url(../images/twitter.png);
+}
+.googleplus{
+	background-image: url(../images/google-plus.png);
+}
+.linkedin{
+	background-image: url(../images/linkedin.png);
+}
+.instagram{
+	background-image: url(../images/instagram.png);
+}
+.flickr{
+	background-image: url(../images/flickr.png);
+}
+.pinterest{
+	background-image: url(../images/pinterest.png);
+}
+.tumblr{
+	background-image: url(../images/tumblr.png);
+}
+.snapchat{
+	background-image: url(../images/snapchat.png);
+}
+.youtube{
+	background-image: url(../images/youtube.png);
+}
+.vimeo{
+	background-image: url(../images/vimeo.png);
+}
+.reddit{
+	background-image: url(../images/reddit.png);
+}
+.swarm{
+	background-image: url(../images/swarm.png);
+}
+.kik{
+	background-image: url(../images/kik.png);
+}
+.shots{
+	background-image: url(../images/shots.png);
+}
+.periscope{
+	background-image: url(../images/periscope.png);
+}
+.mediumsm{
+	background-image: url(../images/mediumsm.png);
+}
+.soundcloud{
+	background-image: url(../images/soundcloud.png);
+}
+.mixcloud{
+	background-image: url(../images/mixcloud.png);
+}
+.whatsapp{
+	background-image: url(../images/whatsapp.png);
+}
+.myspace{
+	background-image: url(../images/myspace.png);
+}
+
+
+/* ///////////////////////////////////////////////////////////////////// 
+//  08 - Footer 
+/////////////////////////////////////////////////////////////////////*/
+
+
+
+footer {
+    width: 100%;
+    background: #000;
+    color: #fff;
+}
+.copyright {
+    margin: 0;
+    padding: 20px 0px;
+    text-align: left;
+}
+.designed {
+    margin: 0;
+    padding: 20px 0px;
+    text-align: right;
+}
+.designed a {
+    background: linear-gradient(330deg, #2C95E4 0%, #ED09CE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.designed a:hover {
+    background: linear-gradient(330deg, #ED09CE 0%, #2C95E4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ///////////////////////////////////////////////////////////////////// 
+//  09 - Pages
+/////////////////////////////////////////////////////////////////////*/
+
+
+#page {
+    padding: 80px 0px 0px 0px;
+}
+.blog-post ol li {
+margin-bottom:20px;
+}
+.blog-info {
+padding:0 0 10px 0;
+}
+.blog-info small {
+font-family:Georgia, 'Times New Roman', sans-serif!important;
+}
+
+/* ///////////////////////////////////////////////////////////////////// 
+//  09 - Responsive Fixes
+/////////////////////////////////////////////////////////////////////*/
+
+
+
+@media all and (min-width: 1400px) {
+	.centered p {
+		font-size: 3em;
+	}
+	.bigheadline {
+		font-size: 15em;
+	}
+	.subheadline {
+		font-size: 5em;
+	}
+}
+
+@media all and (max-width: 1200px) and (min-width: 992px) {
+
+	.coaching {
+		max-width: 293px;
+		height: 213px;
+	}
+	.coaching-wrap i {
+	    font-size: 4em;
+	    margin-top: 28px;
+	}
+	.coaching-wrap h3 {
+	    font-size: 1.4em;
+	}
+	.coaching-wrap p {
+	    font-size: 11px;
+	    padding: 0px 35px;
+	}
+}
+
+@media all and (max-width: 991px) and (min-width: 768px) {
+
+	.coaching {
+		max-width: 293px;
+		height: 293px;
+		margin: 0 auto;
+		margin-bottom: 30px;
+	}
+	.coaching-wrap p {
+		padding: 0px 40px;
+		font-size: 14px;
+	}
+	.pe-dj {
+		font-size: 6em;
+	}
+
+}
+
+@media all and (max-width: 991px) {
+
+	header{
+		background: url(../images/bg-small.jpg) no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: 50% -50px;
+	}
+}
+
+@media all and (max-width: 768px) {
+header{
+		background: url(../images/bg-small.jpg) no-repeat;
+		background-position: 50% -70px;
+    width:100%;
+	}
+  figcaption {
+	height: 100px;
+	width: 100%;
+	top: auto;
+	bottom: 0;
+	opacity: 1.0;
+}
+	.coaching {
+		max-width: 293px;
+		height: 293px;
+		margin: 0 auto;
+		margin-bottom: 30px;
+	}
+	.pe-dj {
+		font-size: 6em;
+	}
+	.coaching-wrap i {
+		margin-top: 50px;
+	}
+	.centered p {
+		font-size: 2em;
+	}
+	.bigheadline {
+		font-size: 5em;
+	}
+	.subheadline {
+		font-size: 2em;
+	}
+	.item-space figure {
+	    max-width: 360px;
+	    margin: 0 auto;
+	}
+	.moreDetails {
+		margin-bottom: 60px;
+	}
+	.copyright, .designed {
+		text-align: center;
+	}
+	.scrollDown {
+	    top: 70%;
+	    left: 46%;
+	}
+}
+@media all and (max-width: 380px) {
+header{
+		background: url(../images/bg-small.jpg) no-repeat;
+		background-position: 40% -70px;
+	}
+  
+	.bigheadline {
+		font-size: 3em!important;
+	}
+	.logo-text {
+	    font-size: 1.8em;
+	}
+	.centered p {
+	    font-size: 1em;
+	}
+	.bigheadline {
+	    font-size: 3em;
+	}
+	.subheadline {
+	    font-family: 'Titillium Web',sans-serif;
+	    font-size: 1.5em;
+	    font-weight: 200;
+	    margin: 0;
+	}
+	.about-block p {
+	    max-width: 90%;
+	}
+	.social-icons a {
+	    width: 30px;
+	    height: 30px;
+	}
+	
+}
+
+@media all and (max-width: 480px) {
+
+	.scrollDown {
+	    top: 80%;
+	    left: 44%;
+	}
+}
